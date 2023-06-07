@@ -24,4 +24,5 @@ public class CalculatorServiceImpl implements CalculatorService {
     public String divide(Integer num1, Integer num2) {
         return String.valueOf(num1/num2);
     }
+
 }
