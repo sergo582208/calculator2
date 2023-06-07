@@ -42,9 +42,9 @@ public class CalculatorController{
         }
         return calculatorService.multiply(num1,num2);
     } @GetMapping("/divide")
-        public String divide(@RequestParam(name = "num1", required = false) Integer num1, @RequestParam(name = "num2", required = false) Integer num2) {
+        public String divide(@RequestParam(name = "num1", required = false) Integer num1, @RequestParam(name = "num2", required = false) Integer num2) throws IllegalAccessException {
         if (num2 == 0) {
-            return "Деление запрещено";
+            throw new IllegalAccessException();
         }
         return calculatorService.divide(num1,num2);
         }
